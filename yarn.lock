@@ -2773,6 +2773,11 @@ source-map@^0.8.0-beta.0:
   dependencies:
     whatwg-url "^7.0.0"
 
+srt-parser-2@^1.1.7:
+  version "1.1.7"
+  resolved "https://registry.yarnpkg.com/srt-parser-2/-/srt-parser-2-1.1.7.tgz#49789ebd7ffff43935797fe25c421234a2fa9507"
+  integrity sha512-JAZKktYKrQ16HPMQkVKxPvCeAdPPJh/186T/uuyCte3+J6/XthkfaGeNqmZ16DDZi1vU6YIINpVHXG5QnG1Hlg==
+
 string.prototype.matchall@^4.0.6:
   version "4.0.7"
   resolved "https://registry.yarnpkg.com/string.prototype.matchall/-/string.prototype.matchall-4.0.7.tgz#8e6ecb0d8a1fb1fda470d81acecb2dba057a481d"

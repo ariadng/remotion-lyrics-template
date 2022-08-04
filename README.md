@@ -1,53 +1,68 @@
-# Remotion video with Tailwind
+# Remotion Video Lyrics Template
 
-<p align="center">
-  <a href="https://github.com/remotion-dev/logo">
-    <img src="https://github.com/remotion-dev/logo/raw/main/withtitle/element-0.png">
-  </a>
-</p>
+## Getting Started
 
-Welcome to your Remotion project!
+After cloning the repository, install all dependencies with this command:
 
-## Commands
-
-**Install Dependencies**
-
-```console
-yarn
+```
+$ yarn install
 ```
 
-**Start Preview**
+Or, if you are using NPM:
 
-```console
-yarn start
+```
+$ npm install
 ```
 
-**Render video**
+Then open the `public` folder and replace `video.mp4` and `lyrics.srt` with the video file and lyrics file you want.
 
-```console
-yarn build
+In `src/Video.tsx` file, change the video configuration inside <Composition /> component.
+
+```jsx
+<Composition
+  id="MyComp"
+  component={MyComposition}
+  durationInFrames={300}    // video duration (second * fps)
+  fps={30}                  // video frame per second
+  width={1080}              // video width
+  height={1920}             // video height
+/>
 ```
 
-**Upgrade Remotion**
+Inside the `src/Composition.tsx` you can add or remove components as you need. You can also change the social media handler by changing the `label` property on `<AccountHandler />` component.
 
-```console
-yarn run upgrade
+```jsx
+<AccountHandler label='your_social_username' />
 ```
 
-## Docs
+## Preview Video
 
-Get started with Remotion by reading the [fundamentals page](https://www.remotion.dev/docs/the-fundamentals).
+Run this command to preview video:
 
-Get started with Tailwind by reading the ["Utility first" page](https://tailwindcss.com/docs/utility-first)
+```
+$ yarn start
+```
 
-## Help
+Or if you are using NPM:
 
-We provide help [on our Discord server](https://remotion.dev/discord).
+```
+$ npm start
+```
 
-## Issues
+## Render the Video
 
-Found an issue with Remotion? [File an issue here](https://github.com/remotion-dev/remotion/issues/new).
+To render the video to mp4 file, you need ```ffmpeg``` installed in your computer.
 
-## License
+If it's already available, run this command:
 
-Notice that for some entities a company license is needed. Read [the terms here](https://github.com/remotion-dev/remotion/blob/main/LICENSE.md).
+```
+$ yarn build
+```
+
+Or if you are using NPM:
+
+```
+$ npm run build
+```
+
+The video will be rendered to `out` folder.
